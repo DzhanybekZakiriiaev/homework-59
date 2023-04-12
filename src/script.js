@@ -73,7 +73,7 @@ function createPostElement(post) {
           <span class="h1 mx-2">
           <i class="fas fa-heart text-muted"></i>
           <i class="bi bi-chat"></i>
-          <i class="bi bi-bookmark"></i>
+          <i class="bi bi-bookmark-fill text-muted"></i>
           </span>
         `;
     post.comments.forEach(comment => {
@@ -109,6 +109,16 @@ function createPostElement(post) {
             heartIcon.classList.remove("active");
         }
     });
+
+    const bookmarkIcon = document.getElementsByClassName("bi-bookmark-fill");
+    bookmarkIcon.addEventListener("click", function() {
+        if (bookmarkIcon.classList.contains("text-muted")) {
+            bookmarkIcon.classList.remove("text-muted");
+        } else {
+            bookmarkIcon.classList.add("text-muted");
+        }
+    });
+
 
     return element;
 }
