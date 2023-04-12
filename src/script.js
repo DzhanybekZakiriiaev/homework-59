@@ -62,16 +62,54 @@ function createPostElement(post) {
     const element = document.createElement('div');
     element.innerHTML = `
           <div>
-            <img class="d-block w-100" src="${post.image}" alt="Post image">
+            <p>${post.user.email}</p>
+            <div>
+            <img class="d-block w-100 post-image" src="${post.image}" alt="Post image">
+            <i class="bi bi-heart-fill image-icon"></i>
+            </div>
             <p>${post.description}</p>
             <p>${post.date}</p>
-            <p>${post.user.email}</p>
           </div>
+          <span class="h1 mx-2">
+          <i class="fas fa-heart text-muted"></i>
+          <i class="bi bi-chat"></i>
+          <i class="bi bi-bookmark"></i>
+          </span>
         `;
     post.comments.forEach(comment => {
         const comm = createCommentElement(comment);
         element.appendChild(comm);
     });
+
+    const likeIcon = document.getElementsByClassName('fa-heart')[0];
+    likeIcon.addEventListener('click', function() {
+        if (likeIcon.classList.contains("text-danger")) {
+            likeIcon.classList.remove("text-danger");
+            likeIcon.classList.add("text-muted");
+        } else {
+            likeIcon.classList.add("text-danger");
+            likeIcon.classList.remove("text-muted");
+        }
+    });
+
+    const postImage = document.getElementsByClassName("post-image");
+    postImage.addEventListener("dblclick", function() {
+        const heartIcon = document.getElementsByClassName("fa-heart");
+        if (heartIcon.classList.contains("text-danger")) {
+            heartIcon.classList.remove("text-danger");
+            heartIcon.classList.add("text-muted");
+        } else {
+            heartIcon.classList.add("text-danger");
+            heartIcon.classList.remove("text-muted");
+        }
+        const imageIcon = document.getElementsByClassName("bi-heart-fill");
+        if (imageIcon.classList.contains("image-icon")) {
+            heartIcon.classList.add("active");
+        } else {
+            heartIcon.classList.remove("active");
+        }
+    });
+
     return element;
 }
 
