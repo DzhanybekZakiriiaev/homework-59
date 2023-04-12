@@ -118,14 +118,17 @@ function createPostElement(post) {
             bookmarkIcon.classList.add("text-muted");
         }
     });
-
-
     return element;
 }
+
 
 function showSplashScreen() {
     const splashScreen = document.getElementById('splash');
     splashScreen.style.display = 'block';
+    const enterBtn = document.getElementsByClassName("enter");
+    enterBtn.addEventListener("click", function() {
+        hideSplashScreen();
+    });
 }
 
 function hideSplashScreen() {

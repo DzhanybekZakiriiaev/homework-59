@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ad34fbc-03cb-4e93-adc3-d835c146d0a2" name="Changes" comment="created project">
-      <change afterPath="$PROJECT_DIR$/src/bootstrap.min.css" afterDir="false" />
+    <list default="true" id="4ad34fbc-03cb-4e93-adc3-d835c146d0a2" name="Changes" comment="added another new task">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-59.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-59.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
     </list>
@@ -51,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681293232796</updated>
-      <workItem from="1681293234168" duration="3807000" />
+      <workItem from="1681293234168" duration="5076000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <created>1681293292017</created>
@@ -60,7 +58,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681293292017</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added bootstrap, and logic for few tasks">
+      <created>1681297095442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681297095442</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added another new task">
+      <created>1681297303062</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681297303062</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added another new task">
+      <created>1681297312087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681297312087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created project" />
-    <option name="LAST_COMMIT_MESSAGE" value="created project" />
+    <MESSAGE value="added bootstrap, and logic for few tasks" />
+    <MESSAGE value="added another new task" />
+    <option name="LAST_COMMIT_MESSAGE" value="added another new task" />
   </component>
 </project>
