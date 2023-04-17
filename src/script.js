@@ -150,7 +150,14 @@ function submitPost(data) {
     fetch('https://myinsta.com', {
         method: 'POST',
         body: data,
-    });
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
 }
 
 const postForm = document.getElementById('post-form');
@@ -162,5 +169,54 @@ function postHandler(e){
     submitPost(data);
     addPost(data);
 }
+
+function submitComment(postId, userId, commentText) {
+    const data = {
+        post_id: postId,
+        user_id: userId,
+        comment_text: commentText,
+    };
+
+    fetch('https://myinsta.com/comments', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    }).then(() => {
+        updateComments(postId);
+    });
+}
+
+function updateComments(postId) {
+    fetch(`https://myinsta.com/posts/${postId}/comments`)
+        .then(response => response.json())
+        .then(data => {
+            const commentsContainer = document.querySelector(`#post-${postId} .comments`);
+            commentsContainer.innerHTML = '';
+
+            data.forEach(comment => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+                commentElement.innerHTML = `
+          <span class="username">${comment.username}</span>
+          <span class="text">${comment.text}</span>
+        `;
+                commentsContainer.appendChild(commentElement);
+            });
+        });
+}
+function commentHandler(event) {
+    event.preventDefault();
+    const form = event.target;
+    const postId = form.querySelector('#post-id').value;
+    const userId = form.querySelector('#user-id').value;
+    const commentText = form.querySelector('#comment-text').value;
+    submitComment(postId, userId, commentText);
+    form.querySelector('#comment-text').value = '';
+}
+
+const commentForm = document.querySelector('.comment-form form');
+commentForm.addEventListener('submit', commentHandler);
 
 postForm.addEventListener('submit', postHandler);
