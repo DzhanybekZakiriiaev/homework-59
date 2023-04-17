@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ad34fbc-03cb-4e93-adc3-d835c146d0a2" name="Changes" comment="added another new task">
+    <list default="true" id="4ad34fbc-03cb-4e93-adc3-d835c146d0a2" name="Changes" comment="created task with splashscreen">
+      <change afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
@@ -10,6 +11,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,7 +36,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/Documents/JAVA/lesson-59/homework-59/src",
+    "last_opened_file_path": "C:/Users/user/Documents/JAVA/lesson-59/homework-59",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -49,7 +59,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681293232796</updated>
-      <workItem from="1681293234168" duration="5076000" />
+      <workItem from="1681293234168" duration="5134000" />
+      <workItem from="1681462618250" duration="23000" />
+      <workItem from="1681471071131" duration="1045000" />
+      <workItem from="1681732105483" duration="939000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <created>1681293292017</created>
@@ -79,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681297312087</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="created task with splashscreen">
+      <created>1681298369234</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681298369234</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +120,7 @@
     <MESSAGE value="created project" />
     <MESSAGE value="added bootstrap, and logic for few tasks" />
     <MESSAGE value="added another new task" />
-    <option name="LAST_COMMIT_MESSAGE" value="added another new task" />
+    <MESSAGE value="created task with splashscreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="created task with splashscreen" />
   </component>
 </project>

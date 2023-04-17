@@ -30,10 +30,6 @@ const posts = [post];
 
 const comments = [comment];
 
-function addPost(newPost) {
-    posts.push(newPost);
-}
-
 function changeLogin() {
     user.isLoggedIn = !user.isLoggedIn;
 }
@@ -67,7 +63,7 @@ function createPostElement(post) {
             <img class="d-block w-100 post-image" src="${post.image}" alt="Post image">
             <i class="bi bi-heart-fill image-icon"></i>
             </div>
-            <p>${post.description}</p>
+            <p>${post.content}</p>
             <p>${post.date}</p>
           </div>
           <span class="h1 mx-2">
@@ -92,7 +88,7 @@ function createPostElement(post) {
         }
     });
 
-    const postImage = document.getElementsByClassName("post-image");
+    const postImage = document.getElementsByClassName("post-image")[0];
     postImage.addEventListener("dblclick", function() {
         const heartIcon = document.getElementsByClassName("fa-heart");
         if (heartIcon.classList.contains("text-danger")) {
@@ -102,7 +98,7 @@ function createPostElement(post) {
             heartIcon.classList.add("text-danger");
             heartIcon.classList.remove("text-muted");
         }
-        const imageIcon = document.getElementsByClassName("bi-heart-fill");
+        const imageIcon = document.getElementsByClassName("bi-heart-fill")[0];
         if (imageIcon.classList.contains("image-icon")) {
             heartIcon.classList.add("active");
         } else {

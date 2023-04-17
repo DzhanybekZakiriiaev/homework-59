@@ -1,0 +1,13 @@
+.image-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: gray;
+    visibility: hidden;
+}
+.image-icon.active {
+    color: red;
+    visibility: visible;
+}
