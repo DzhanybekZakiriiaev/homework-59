@@ -71,6 +71,14 @@ function createPostElement(post) {
           <i class="bi bi-chat"></i>
           <i class="bi bi-bookmark-fill text-muted"></i>
           </span>
+          <div class="comment-form">
+            <form>
+                <input type="hidden" id="post-id" value=${post.id}>
+                <input type="hidden" id="user-id" value=${post.user.id}>
+                <textarea id="comment-text" rows="3" placeholder="Add a comment..."></textarea>
+                <button id="comment-btn" type="submit">Post</button>
+            </form>
+          </div>
         `;
     post.comments.forEach(comment => {
         const comm = createCommentElement(comment);
