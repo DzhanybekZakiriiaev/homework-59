@@ -137,3 +137,22 @@ function addPost(post) {
     postsContainer.appendChild(post);
     posts.push(post);
 }
+
+function submitPost(data) {
+    fetch('https://myinsta.com', {
+        method: 'POST',
+        body: data,
+    });
+}
+
+const postForm = document.getElementById('post-form');
+
+function postHandler(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    submitPost(data);
+    addPost(data);
+}
+
+postForm.addEventListener('submit', postHandler);
