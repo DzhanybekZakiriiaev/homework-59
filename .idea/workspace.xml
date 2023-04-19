@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ad34fbc-03cb-4e93-adc3-d835c146d0a2" name="Changes" comment="added comment method">
+    <list default="true" id="4ad34fbc-03cb-4e93-adc3-d835c146d0a2" name="Changes" comment="seems like I fixed splash">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/Documents/JAVA/lesson-59/homework-59",
+    "last_opened_file_path": "C:/Users/user/Desktop/microgram",
     "list.type.of.created.stylesheet": "CSS",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
@@ -59,7 +62,8 @@
       <workItem from="1681293234168" duration="5134000" />
       <workItem from="1681462618250" duration="23000" />
       <workItem from="1681471071131" duration="1045000" />
-      <workItem from="1681732105483" duration="2597000" />
+      <workItem from="1681732105483" duration="3368000" />
+      <workItem from="1681893050169" duration="4287000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <created>1681293292017</created>
@@ -131,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681734452764</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="seems like I fixed splash">
+      <created>1681734828514</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681734828514</updated>
+    </task>
+    <task id="LOCAL-00012" summary="seems like I fixed splash">
+      <created>1681734921846</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681734921846</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +176,7 @@
     <MESSAGE value="added methods for add post" />
     <MESSAGE value="added comment form" />
     <MESSAGE value="added comment method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comment method" />
+    <MESSAGE value="seems like I fixed splash" />
+    <option name="LAST_COMMIT_MESSAGE" value="seems like I fixed splash" />
   </component>
 </project>

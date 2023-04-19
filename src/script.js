@@ -84,65 +84,71 @@ function createPostElement(post) {
         const comm = createCommentElement(comment);
         element.appendChild(comm);
     });
-
-    const likeIcon = document.getElementsByClassName('fa-heart')[0];
-    likeIcon.addEventListener('click', function() {
-        if (likeIcon.classList.contains("text-danger")) {
-            likeIcon.classList.remove("text-danger");
-            likeIcon.classList.add("text-muted");
-        } else {
-            likeIcon.classList.add("text-danger");
-            likeIcon.classList.remove("text-muted");
-        }
-    });
-
-    const postImage = document.getElementsByClassName("post-image")[0];
-    postImage.addEventListener("dblclick", function() {
-        const heartIcon = document.getElementsByClassName("fa-heart");
-        if (heartIcon.classList.contains("text-danger")) {
-            heartIcon.classList.remove("text-danger");
-            heartIcon.classList.add("text-muted");
-        } else {
-            heartIcon.classList.add("text-danger");
-            heartIcon.classList.remove("text-muted");
-        }
-        const imageIcon = document.getElementsByClassName("bi-heart-fill")[0];
-        if (imageIcon.classList.contains("image-icon")) {
-            heartIcon.classList.add("active");
-        } else {
-            heartIcon.classList.remove("active");
-        }
-    });
-
-    const bookmarkIcon = document.getElementsByClassName("bi-bookmark-fill");
-    bookmarkIcon.addEventListener("click", function() {
-        if (bookmarkIcon.classList.contains("text-muted")) {
-            bookmarkIcon.classList.remove("text-muted");
-        } else {
-            bookmarkIcon.classList.add("text-muted");
-        }
-    });
     return element;
 }
+const likeIcon = document.querySelector('.fa-heart');
+likeIcon.addEventListener('click', function() {
+    if (likeIcon.classList.contains("text-danger")) {
+        likeIcon.classList.remove("text-danger");
+        likeIcon.classList.add("text-muted");
+    } else {
+        likeIcon.classList.add("text-danger");
+        likeIcon.classList.remove("text-muted");
+    }
+});
 
+const postImage = document.querySelector(".post-image");
+postImage.addEventListener("dblclick", function() {
+    const heartIcon = document.querySelector(".fa-heart");
+    if (heartIcon.classList.contains("text-danger")) {
+        heartIcon.classList.remove("text-danger");
+        heartIcon.classList.add("text-muted");
+    } else {
+        heartIcon.classList.add("text-danger");
+        heartIcon.classList.remove("text-muted");
+    }
+    const imageIcon = document.querySelector(".bi-heart-fill");
+    if (imageIcon.classList.contains("image-icon")) {
+        heartIcon.classList.add("active");
+    } else {
+        heartIcon.classList.remove("active");
+    }
+});
+
+const bookmarkIcon = document.querySelector(".bi-bookmark-fill");
+bookmarkIcon.addEventListener("click", function() {
+    if (bookmarkIcon.classList.contains("text-muted")) {
+        bookmarkIcon.classList.remove("text-muted");
+    } else {
+        bookmarkIcon.classList.add("text-muted");
+    }
+});
 
 function showSplashScreen() {
     const splashScreen = document.getElementById('splash');
     splashScreen.style.display = 'block';
-    const enterBtn = document.getElementsByClassName("enter");
-    enterBtn.addEventListener("click", function() {
-        hideSplashScreen();
-    });
 }
+
+const enterBtn = document.querySelector(".enter");
+
+enterBtn.addEventListener("click", function() {
+    console.log("enter button clicked");
+    hideSplashScreen();
+});
+
 
 function hideSplashScreen() {
     const splashScreen = document.getElementById('splash');
     splashScreen.style.display = 'none';
+    const postsDiv = document.getElementById('posts');
+    postsDiv.style.display = 'block';
+    const formDiv = document.getElementById('post-form');
+    formDiv.style.display = 'block';
 }
 
 function addPost(post) {
     const postsContainer = document.getElementById('posts');
-    postsContainer.appendChild(post);
+    postsContainer.appendChild(createPostElement(post));
     posts.push(post);
 }
 
@@ -174,19 +180,37 @@ function submitComment(postId, userId, commentText) {
     const data = {
         post_id: postId,
         user_id: userId,
-        comment_text: commentText,
+        text: commentText
     };
-
     fetch('https://myinsta.com/comments', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json',
-        },
-    }).then(() => {
-        updateComments(postId);
-    });
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    const comment = {
+        id: comments.length + 1,
+        text: commentText,
+        user: user,
+        postId: postId,
+        date : new Date()
+    };
+    comments.push(comment);
+
+    const postElement = document.getElementById(`post-${postId}`);
+    const commentElement = createCommentElement(comment);
+    postElement.appendChild(commentElement);
 }
+
 
 function updateComments(postId) {
     fetch(`https://myinsta.com/posts/${postId}/comments`)
